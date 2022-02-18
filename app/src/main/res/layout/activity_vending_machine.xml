@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".VendingMachine">
+
+    <Button
+        android:id="@+id/button1.0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:backgroundTint="@color/teal_200"
+        android:text="@string/I1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/button.50"
+        tools:ignore="TextContrastCheck" />
+
+    <Button
+        android:id="@+id/button.25"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:backgroundTint="@color/teal_200"
+        android:text="@string/I25"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/button.50"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="TextContrastCheck" />
+
+    <Button
+        android:id="@+id/button.50"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:backgroundTint="@color/teal_200"
+        android:text="@string/I50"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="TextContrastCheck" />
+
+    <Button
+        android:id="@+id/buyBlue"
+        android:layout_width="79dp"
+        android:layout_height="37dp"
+        android:backgroundTint="@color/teal_200"
+        android:text="@string/buy"
+        app:layout_constraintEnd_toStartOf="@+id/buyRed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/BDorito"
+        tools:ignore="TouchTargetSizeCheck,DuplicateSpeakableTextCheck,TextContrastCheck" />
+
+    <Button
+        android:id="@+id/buyRed"
+        android:layout_width="79dp"
+        android:layout_height="37dp"
+        android:backgroundTint="@color/teal_200"
+        android:text="@string/buy"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/RDorito"
+        tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
+
+    <Button
+        android:id="@+id/buyLays"
+        android:layout_width="79dp"
+        android:layout_height="37dp"
+        android:backgroundTint="@color/teal_200"
+        android:text="@string/buy"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/buyRed"
+        app:layout_constraintTop_toBottomOf="@+id/Lays"
+        tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
+
+    <TextView
+        android:id="@+id/moneyInserted"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="48dp"
+        android:text="@string/zero"
+        android:textColor="@color/black"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/moneyInserted2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/moneySign"
+        android:textColor="@color/black"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toStartOf="@+id/moneyInserted"
+        app:layout_constraintTop_toTopOf="@+id/moneyInserted" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="410dp"
+        android:layout_height="116dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/moneyInserted2">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="81dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:contentDescription="@string/bluedoritos"
+            app:srcCompat="@drawable/doritoscoolranch" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:contentDescription="@string/reddoritos"
+            app:srcCompat="@drawable/doritosnachocheese" />
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:contentDescription="@string/lays"
+            app:srcCompat="@drawable/lays" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginTop="60dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+        <ImageView
+            android:id="@+id/imageView6"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".5"
+            android:contentDescription="@string/skittles"
+            app:srcCompat="@drawable/skittles" />
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".5"
+            android:contentDescription="@string/reeses"
+            app:srcCompat="@drawable/reeses" />
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".5"
+            android:contentDescription="@string/snickers"
+            app:srcCompat="@drawable/snickers" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="410dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+
+        <ImageView
+            android:id="@+id/imageView9"
+            android:layout_width="153dp"
+            android:layout_height="142dp"
+            android:contentDescription="@string/pretzels"
+            app:srcCompat="@drawable/pretzels" />
+
+        <ImageView
+            android:id="@+id/imageView8"
+            android:layout_width="107dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".5"
+            android:contentDescription="@string/penutcookie"
+            app:srcCompat="@drawable/cookiepenutbutter" />
+
+        <ImageView
+            android:id="@+id/imageView7"
+            android:layout_width="106dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".5"
+            android:contentDescription="@string/chocolatecookie"
+            app:srcCompat="@drawable/cookiechocolate" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/BDorito"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toStartOf="@+id/RDorito"
+        app:layout_constraintHorizontal_bias="0.41"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        tools:text="1" />
+
+    <TextView
+        android:id="@+id/Skittles"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toStartOf="@+id/Reeses"
+        app:layout_constraintHorizontal_bias="0.31"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+        tools:text="1" />
+
+    <TextView
+        android:id="@+id/RDorito"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        tools:text="1" />
+
+    <TextView
+        android:id="@+id/Lays"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.61"
+        app:layout_constraintStart_toEndOf="@+id/RDorito"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        tools:text="1" />
+
+    <TextView
+        android:id="@+id/Reeses"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+        tools:text="1" />
+
+    <TextView
+        android:id="@+id/Snickers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.66"
+        app:layout_constraintStart_toEndOf="@+id/Reeses"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+        tools:text="1" />
+
+    <TextView
+        android:id="@+id/Pretzels"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toStartOf="@+id/PenutCookie"
+        app:layout_constraintHorizontal_bias="0.36"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3"
+        tools:text="1" />
+
+    <TextView
+        android:id="@+id/PenutCookie"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.52"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3"
+        tools:text="1" />
+
+    <TextView
+        android:id="@+id/ChocolateCookie"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.68"
+        app:layout_constraintStart_toEndOf="@+id/PenutCookie"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3"
+        tools:text="1" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/moneySign"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toStartOf="@+id/BDorito"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/moneySign"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toStartOf="@+id/RDorito"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/moneySign"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toStartOf="@+id/Lays"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/moneySign"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toStartOf="@+id/Skittles"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/moneySign"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toStartOf="@+id/Reeses"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+
+    <TextView
+        android:id="@+id/textView17"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/moneySign"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toStartOf="@+id/Snickers"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+
+    <TextView
+        android:id="@+id/textView18"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/moneySign"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toStartOf="@+id/Pretzels"
+        app:layout_constraintTop_toTopOf="@+id/PenutCookie" />
+
+    <TextView
+        android:id="@+id/textView19"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/moneySign"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toStartOf="@+id/PenutCookie"
+        app:layout_constraintTop_toTopOf="@+id/PenutCookie" />
+
+    <TextView
+        android:id="@+id/textView20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/moneySign"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toStartOf="@+id/ChocolateCookie"
+        app:layout_constraintTop_toTopOf="@+id/ChocolateCookie" />
+
+    <Button
+        android:id="@+id/TakeChange"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
+        android:backgroundTint="@color/teal_200"
+        android:text="@string/change"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TextContrastCheck" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
